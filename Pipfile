@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-swagger = "*"
+psycopg2-binary = "*"
+python-dotenv = "*"
+flask-cors = "*"
+flask-admin = "*"
+typing-extensions = "*"
+alembic = "*"
+itsdangerous = "*"
+werkzeug = "*"
+psycopg2 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
+
+[scripts]
+start="flask run -p 3001 -h 0.0.0.0"
+init="flask db init"
+migrate="flask db migrate"
+local="heroku local"
+upgrade="flask db upgrade"
+reset_db="bash ./utils/reset_migrations.bash"
